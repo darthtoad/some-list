@@ -2,11 +2,11 @@
 
 <div *ngFor="let listing of listings | async" class="panel panel-default">
   <div class="panel-body">
-    <h3 (click)="seeDetails(listings)">{{listing.postName}} - {{lisiting.postType}}</h3>
-    <h5>${{listing.price}}</h5>
-    <p>${{listing.datePosted}}</p>
+    <h3 (click)="seeDetails(listing)">{{listing.postName}} - {{listing.postType}}</h3>
     <div *ngIf="currentRoute === '/admin'">
-      {{listing.body}}
+      <h5>${{listing.price}}</h5>
+      <h6>${{listing.datePosted}}</h6>
+      <p>{{listing.body}}<p>
       <hr>
       <app-listing-edit [selectedListing]="listing"></app-listing-edit>
     </div>
