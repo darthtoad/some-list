@@ -1,0 +1,29 @@
+<h4>Edit Listing</h4>
+
+<label>Name:</label>
+<input [(ngModel)]="selectedListing.postName">
+<br>
+
+<label>Type:</label>
+<input [(ngModel)]="selectedListing.postType">
+<br>
+
+<label>User:</label>
+<input [(ngModel)]="selectedListing.userName">
+<br>
+
+<label>Body:</label>
+<input [(ngModel)]="selectedListing.body">
+<br>
+
+<label>Price:</label>
+<input [(ngModel)]="selectedListing.price" type="number">
+<br>
+
+<label>Date Posted:</label>
+<input [(ngModel)]="selectedListing.datePosted" type="datetime-local">
+<br>
+
+<button (click)="beginUpdatingListing(selectedListing)">Update</button>
+<hr>
+<button class="btn btn-danger" (click)="beginDeletingListing(selectedListing)">Delete</button>

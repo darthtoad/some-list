@@ -1,0 +1,25 @@
+{
+  "listings": [{
+      "postName": "1983 GMC Custom Van",
+      "postType": "Cars and Trucks",
+      "userName": "BA Barracus",
+      "body": "This car is helluva good. It'll throw all suckas to the moon!",
+      "price": 2300,
+      "datePosted": "2/26/2018, 3:08:07 PM"
+    }, {
+      "postName": "Brown Chair",
+      "postType": "Furniture",
+      "userName": "John Johnson",
+      "body": "It's a good old chair. Too bad I have to get rid of it, but it doesn't match the mood of the new house",
+      "price": 100,
+      "datePosted": "1/18/2018, 5:42:12 PM"
+    }, {
+      "postName": "Couch",
+      "postType": "Furniture",
+      "userName": "Some Guy",
+      "body": "It's a couch",
+      "price": 3,
+      "datePosted": "4/23/2012, 4:23:42 AM"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Add New Listing</h3>
+  </div>
+  <div class="panel-body">
+    <label>Listing Name:</label>
+    <br>
+    <input #newPostName>
+    <br>
+    <label>Listing Type:</label>
+    <br>
+    <input #newPostType>
+    <br>
+    <label>User Name:</label>
+    <br>
+    <input #newUserName>
+    <br>
+    <label>Listing Body:</label>
+    <br>
+    <textarea #newBody></textarea>
+    <br>
+    <label>Price:</label>
+    <input #newPrice type="number">
+    <br>
+    <button (click)="submitForm(newPostName.value, newPostType.value, newUserName.value, newBody.value, newPrice.value, newDateCreated); newPostName.value=''; newPostType.value=''; newUserName.value=''; newBody.value=''; newPrice.value=''">Add New Listing</button>
+  </div>
+</div>
+
+<app-marketplace></app-marketplace>
