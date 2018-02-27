@@ -14,6 +14,8 @@ export class MarketplaceComponent implements OnInit {
   listings: FirebaseListObservable<any[]>
   currentRoute: string = this.router.url;
 
+  filterByPostType: string = "all";
+
   constructor(private router: Router, private listingService: ListingService) { }
 
   ngOnInit() {
@@ -22,6 +24,10 @@ export class MarketplaceComponent implements OnInit {
 
   seeDetails(clickedListing) {
     this.router.navigate(['listings', clickedListing.$key])
+  }
+
+  onChange(optionFromMenu) {
+    this.filterByPostType = optionFromMenu;
   }
 
 }

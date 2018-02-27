@@ -1,11 +1,20 @@
 <h2>Listings</h2>
 
-<div *ngFor="let listing of listings | async" class="panel panel-default">
+<h3>Filter listings</h3>
+<select (change)="onChange($event.target.value)">
+  <option value="all">All listings</option>
+  <option value="furniture">Furniture</option>
+  <option value="cars and trucks">Cars and Trucks</option>
+  <option value="housing">Housing</option>
+  <option value="misc">Misc</option>
+</select>
+
+<div *ngFor="let listing of listings | async | type:filterByPostType" class="panel panel-default">
   <div class="panel-body">
     <h3 (click)="seeDetails(listing)">{{listing.postName}} - {{listing.postType}}</h3>
     <div *ngIf="currentRoute === '/admin'">
       <h5>${{listing.price}}</h5>
-      <h6>${{listing.datePosted}}</h6>
+      <h6>{{listing.datePosted}}</h6>
       <p>{{listing.body}}<p>
       <hr>
       <app-listing-edit [selectedListing]="listing"></app-listing-edit>

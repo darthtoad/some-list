@@ -13,6 +13,7 @@ import { ListingDetailComponent } from './listing-detail/listing-detail.componen
 import { ListingEditComponent } from './listing-edit/listing-edit.component';
 import { AdminComponent } from './admin/admin.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { TypePipe } from './type.pipe';
 
 export const thisFirebaseConfig = {
   apiKey: firebaseConfig.apiKey,
@@ -29,7 +30,8 @@ export const thisFirebaseConfig = {
     ListingDetailComponent,
     ListingEditComponent,
     AdminComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    TypePipe
   ],
   imports: [
     BrowserModule,
